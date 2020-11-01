@@ -2,7 +2,7 @@
     When a node is joined to another node, they are added to the same collection which is identified by the value of the second node. This continues for each subsequent union meaning that the array is affectivley reindexing the collections each time a union is performed. This would make the algo quick to check if array positions are in the same collection but slow to join them together.
 */
 
-public class QuickFind
+public class QuickFind implements IUnionFind
 {
   private int[] id;
   

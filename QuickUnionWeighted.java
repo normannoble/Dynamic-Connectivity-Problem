@@ -1,4 +1,4 @@
-public class QuickUnionWeighted {
+public class QuickUnionWeighted implements IUnionFind {
   private int[] id;
   private int[] sz;
 

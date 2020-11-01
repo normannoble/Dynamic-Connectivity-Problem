@@ -1,4 +1,4 @@
-public class QuickUnion {
+public class QuickUnion implements IUnionFind {
   private int[] id;
 
   public QuickUnion(int N) {
