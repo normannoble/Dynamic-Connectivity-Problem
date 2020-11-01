@@ -1,7 +1,6 @@
 public class QuickUnionWeighted implements IUnionFind {
   private int[] id;
   private int[] sz;
-  private boolean compressionEnabled = false;
 
   public QuickUnionWeighted(int N) {
     id = new int[N];
@@ -16,11 +15,10 @@ public class QuickUnionWeighted implements IUnionFind {
   private int root(int i) {
     // while nodeValue is not the same as nodeKey (i.e. not at root)
     while (i != id[i])
-      if (compressionEnabled) {
-        id[i] = id[id[i]];
-      }
+    // compress root path
+     id[i] = id[id[i]];
     // nodeValue changes to next node up the chain
-    i = id[i];
+    // i = id[i];
     // return when root is reached.
     return i;
   }
