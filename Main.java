@@ -4,7 +4,7 @@ public class Main {
     //createQFConnections(quickFind);
     //System.out.println(quickFind.connected(4, 3));
 
-    QuickUnion quickUnion = new QuickUnion(10);
+    QuickUnionWeighted quickUnion = new QuickUnionWeighted(10);
     createQUCOnnections(quickUnion);
     System.out.println(quickUnion.connected(4, 3));
 
@@ -14,7 +14,7 @@ public class Main {
     }
   }
 
-  public static void createQUCOnnections(QuickUnion quickUnion) {
+  public static void createQUCOnnections(QuickUnionWeighted quickUnion) {
     quickUnion.union(4, 3);
     quickUnion.union(3, 8);
     quickUnion.union(3, 7);
